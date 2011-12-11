@@ -5,5 +5,7 @@ description: Shows sticky elements
 authors:
   - Arthur Clemens
 resources:
-https://raw.github.com/ArthurClemens/jquery-sticky-plugin/master/js/jquery.sticky.js
+  - https://raw.github.com/ArthurClemens/jquery-sticky-plugin/master/js/jquery.sticky.js
+normalize_css: no
+...
 */
