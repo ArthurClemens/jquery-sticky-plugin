@@ -1,3 +1,3 @@
-jQuery(document).ready(function($) {
-	$('.mySticky').sticky();
-});
+window.onload = function() {
+    jQuery('.mySticky').sticky();
+}
