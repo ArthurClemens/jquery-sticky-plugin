@@ -1,7 +1,12 @@
 Sticky jQuery Plugin v0.1.0
 ---------------------------
-
 Keep one, two or more elements stuck to the page when scrolling up and down.
+
+
+
+Demo
+----
+Fiddle: http://jsfiddle.net/gh/get/jquery/1.7.1/ArthurClemens/jquery-sticky-plugin/tree/master/jsfiddle/
 
 
 
@@ -37,7 +42,7 @@ This is code version 0.1.0.
 
 - Untested on IEs
 - Cannot pass y position: it is assumed fixed elements are stuck to the top
-- Cannot unstick elements
+- Cannot unstick elements (for instance let the user remove a sticky bar)
 
 
 
