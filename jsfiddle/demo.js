@@ -1,3 +1,5 @@
 window.onload = function() {
-    jQuery('.makeSticky').sticky();
+    jQuery('.makeSticky').sticky({
+    	cssclass: 'sticky'
+    });
 };
