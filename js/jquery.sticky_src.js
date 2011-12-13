@@ -1,10 +1,13 @@
 (function( $ ){
 
-	$.fn.sticky = function() {
+	$.fn.sticky = function(options) {
 	
+		var settings = $.extend( {
+		  'cssclass' : 'sticky'
+		}, options);
+		
 		var $fixedElements = [],
 			$fixedElement,
-			contentPadding = 0,
 			offsetY = 0,
 			scrollTop = 0,
 			ival,
@@ -44,8 +47,8 @@
 						$fixedElement.isFixed = 1;
 						
 						// fix element at y position stickyY
+						$fixedElement.addClass(settings.cssclass);
 						$fixedElement.css({
-							position: 'fixed',
 							top: $fixedElement.stickyY + 'px'
 						});			
 						// add a div to hold the padding the fixed element has just removed
@@ -58,8 +61,8 @@
 					if ($fixedElement.isFixed) {
 						$fixedElement.isFixed = 0;
 						$fixedElement.$div.remove();
+						$fixedElement.removeClass(settings.cssclass);
 						$fixedElement.css({
-							position: 'relative',
 							top: 'auto'
 						});
 					}

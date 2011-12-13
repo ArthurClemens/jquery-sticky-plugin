@@ -17,26 +17,49 @@ Usage
 
 One sticky element:
 
-	<div class='mySticky'>
+	HTML:
+	<div class='makeSticky'>
 		sticky menu
 	</div>
-	
-	jQuery('.mySticky').sticky();
+
+	CSS:
+	.sticky {
+		position: fixed;
+		width: 100%;
+	}
+
+	JS:	
+	jQuery('.makeSticky').sticky();
 
 
 Multiple sticky elements:
 
-	<div class='mySticky'>
+	HTML:
+	<div class='makeSticky'>
 		sticky content one
-	</mySticky>
-	<div class='mySticky'>
+	</makeSticky>
+	<div class='makeSticky'>
 		sticky content two
-	</mySticky>
+	</makeSticky>
 	
-	jQuery('.mySticky').sticky();
+
+	CSS:
+	.sticky {
+		position: fixed;
+		width: 100%;
+	}
+	
+	JS:
+	jQuery('.makeSticky').sticky();
 
 
 
+Options
+-------
+- cssclass: CSS class name of sticky element when stuck. Default: 'sticky'.
+
+
+				
 Demo
 ----
 Fiddle: http://jsfiddle.net/gh/get/jquery/1.7.1/ArthurClemens/jquery-sticky-plugin/tree/master/jsfiddle/
