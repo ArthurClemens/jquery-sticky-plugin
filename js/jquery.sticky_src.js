@@ -13,6 +13,8 @@
 			i,
 			$this,
 			scrollZone,
+			fix,
+			unfix,
 			handleScroll,
 			handleScrollEvent,
 			// scroll wait duration depends if sticky element changes are within scroll zone
@@ -35,6 +37,29 @@
 			$fixedElements.push($this);
 		});
 
+		fix = function ($element) {
+			// fix element at y position stickyY
+			$element.addClass(settings.cssclass);
+			$element.css({
+				top: $element.stickyY + 'px'
+			});
+			// add a div to hold the padding the fixed element has just removed
+			$element.$div = jQuery('<div></div>').css({
+				height: $element.outerHeight()
+			});
+			$element.after($element.$div);
+			$fixedElement.isFixed = 1;
+		};
+
+		unfix = function ($element) {
+			$element.$div.remove();
+			$element.removeClass(settings.cssclass);
+			$element.css({
+				top: 'auto'
+			});
+			$fixedElement.isFixed = 0;
+		};
+
 		handleScroll = function () {
 
 			scrollTop = $(window).scrollTop();
@@ -43,27 +68,11 @@
 
 				if (scrollTop >= $fixedElement.scrollY) {
 					if (!$fixedElement.isFixed) {
-						$fixedElement.isFixed = 1;
-
-						// fix element at y position stickyY
-						$fixedElement.addClass(settings.cssclass);
-						$fixedElement.css({
-							top: $fixedElement.stickyY + 'px'
-						});
-						// add a div to hold the padding the fixed element has just removed
-						$fixedElement.$div = jQuery('<div></div>').css({
-							height: $fixedElement.outerHeight()
-						});
-						$fixedElement.after($fixedElement.$div);
+						fix($fixedElement);
 					}
 				} else {
 					if ($fixedElement.isFixed) {
-						$fixedElement.isFixed = 0;
-						$fixedElement.$div.remove();
-						$fixedElement.removeClass(settings.cssclass);
-						$fixedElement.css({
-							top: 'auto'
-						});
+						unfix($fixedElement);
 					}
 				}
 			}
