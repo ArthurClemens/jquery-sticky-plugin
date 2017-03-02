@@ -1,19 +1,20 @@
-Sticky jQuery Plugin v0.1.0
----------------------------
+# Sticky jQuery Plugin
+
+v0.1.0
+
 Keep one, two or more elements stuck to the page when scrolling up and down.
 
 
 
-Background
-----------
+## Background
+
 It's common practice to have a menu or sidebar navigation stick at the top of the browser window, using 'position: fixed'. But because a fixed positioned element is removed from the rendering flow (as if the fixed element does not exist), content below will suddenly shift upwards. 
 This plugin inserts an element below the fixed element to 'fill up' the removed spacing.
 It also calculates the y position of fixed elements below to encounter that removed spacing.
 
 
 
-Usage
------
+## Usage
 
 One sticky element:
 
@@ -54,20 +55,20 @@ Multiple sticky elements:
 
 
 
-Options
--------
+### Options
+
 - cssclass: CSS class name of sticky element when stuck. Default: 'sticky'.
 
 
 				
-Demo
-----
+## Demo
+
 Fiddle: http://jsfiddle.net/gh/get/jquery/1.7.1/ArthurClemens/jquery-sticky-plugin/tree/master/jsfiddle/
 
 
 
-Caveats
--------
+## Caveats
+
 This is code version 0.1.0.
 
 - Untested on IEs
@@ -76,8 +77,8 @@ This is code version 0.1.0.
 
 
 
-License
--------
+## License
+
 The MIT License
 
 Copyright (c) 2011 Arthur Clemens, arthur@visiblearea.com
