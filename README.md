@@ -38,10 +38,10 @@ Multiple sticky elements:
 	HTML:
 	<div class='makeSticky'>
 		sticky content one
-	</makeSticky>
+	</div>
 	<div class='makeSticky'>
 		sticky content two
-	</makeSticky>
+	</div>
 	
 
 	CSS:
@@ -59,11 +59,6 @@ Multiple sticky elements:
 
 - cssclass: CSS class name of sticky element when stuck. Default: 'sticky'.
 
-
-				
-## Demo
-
-Fiddle: http://jsfiddle.net/gh/get/jquery/1.7.1/ArthurClemens/jquery-sticky-plugin/tree/master/jsfiddle/
 
 
 
